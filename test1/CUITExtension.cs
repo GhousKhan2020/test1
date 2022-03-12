@@ -10,10 +10,10 @@ namespace test1
 {
     /// <summary>
 
-    //This is an Extension class
-    // It is static
-    //It will have extension methods and these methods will be static
-    //Extension methods to perform CodedUI WinControl Operations
+    ///This is an Extension class
+    /// It is static
+    ///It will have extension methods and these methods will be static
+    ///Extension methods to perform CodedUI WinControl Operations
     ///</summary>
     public static  class CUITExtension
     {

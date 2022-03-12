@@ -9,21 +9,23 @@ using System.Threading.Tasks;
 
 namespace test1
 {
-    class NotePad
+    class NotePad : BaseCUITNotePad
     {
         public void testmethod()
         {
-            WinWindow np = new WinWindow();
-            np.SearchProperties[WinWindow.PropertyNames.ClassName]
-                = "Notepad++";
-            WinTitleBar tp = new WinTitleBar(np);
-            tp.SearchProperties[WinTitleBar.PropertyNames.ControlType]
-                = "TitleBar";
-            WinButton MaximizeButton = new WinButton(tp);
-            MaximizeButton.SearchProperties[WinButton.PropertyNames.Name]
-             = "Maximize";
-            Thread.Sleep(500);
-            Mouse.Click(MaximizeButton);
+            SetParent("Notepad++");
+            ObjectCreator<WinButton>(PropertyType.Name, "Maximize").Click();
+            //WinWindow np = new WinWindow();
+            //np.SearchProperties[WinWindow.PropertyNames.ClassName]
+            //    = "Notepad++";
+            //WinTitleBar tp = new WinTitleBar(np);
+            //tp.SearchProperties[WinTitleBar.PropertyNames.ControlType]
+            //    = "TitleBar";
+            //WinButton MaximizeButton = new WinButton(tp);
+            //MaximizeButton.SearchProperties[WinButton.PropertyNames.Name]
+            // = "Maximize";
+            //Thread.Sleep(500);
+            //Mouse.Click(MaximizeButton);
         }
     }
 }
