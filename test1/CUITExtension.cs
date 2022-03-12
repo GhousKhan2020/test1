@@ -23,7 +23,7 @@ namespace test1
         /// <param name="control"></param>
         public static void Click(this WinControl control)
         {
-            Mouse.Click(control);
+           
         }
     }
 }
